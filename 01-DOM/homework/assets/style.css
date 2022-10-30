@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(232, 246, 255);
+  background-color: #ffff;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   margin-top: 56px;
   display: flex;
@@ -12,17 +12,19 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: #428fbb;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
   height: 56px;
   /* padding-left: 15px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: .5em 0;
 }
 
 #header span {
   font-size: 24px;
-  color: white;
+  color: black;
   padding-right: 15px;
 }
 
@@ -30,13 +32,18 @@ body {
   padding-left: 15px;
 }
 
+h1 {
+  margin-top: 3em;
+}
+
 
 #container {
-  background-color: #428fbb;
-  box-shadow: 2px 2px 5px#000;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   width: 50%;
   min-width: 700px;
   border-radius: 5px;
+  margin-top: 2em;
 }
 
 #inputContainer {
@@ -44,15 +51,23 @@ body {
   justify-content: center;
   padding: 10px;
   margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 #toDoInput {
   outline: none;
   width: 75%;
-  padding-left: 10px;
-  font-size: 20px;
+  padding-left: 20px;
+  font-size: 17px;
   border: none;
   border-radius: 4px;
+  border: 1px solid #eee9e9;
+  
+}
+
+#toDoInput:focus{
+  border: 1px solid #09cf85;
+  transition: all .3s ease-in-out;
 }
 
 #addButton {
@@ -61,12 +76,27 @@ body {
   align-items: center;
   width: 100px;
   margin-left: 10px;
-  border-radius: 4px;
+  border-radius: 3px;
   cursor: pointer;
   height: 35px;
-  background: #0160A2;
-  color: #FFF;
-  font-size: 20px;
+  background: #2edb9e;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .3s ease-in-out;
+  border: 1px solid #fff
+}
+
+#addButton a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+#addButton:hover{
+  border: 1px solid #fff;
+  background-color: #09cf85;
+  color: #fff;
 }
 
 #toDoContainer {
@@ -75,6 +105,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   cursor: pointer;
+  margin-bottom: 1em;
 }
 
 .toDoShell {
@@ -83,11 +114,14 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #fff;
+  background: #2edb9e;
   margin-bottom: 10px;
   border-radius: 5px;
   font-size: 20px;
   padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .toDoShell span {
